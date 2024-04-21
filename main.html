@@ -1,3 +1,4 @@
+https://www.mediafire.com/file/mhhxj3wesvwbkf4/simplebomber_v1.0(1)_mod.apk/file
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Политика конфиденциальности для программы SMSPrankBomb</title>
     <style>
+        body {
+            background-color: #f0f8ff; /* Светло-синий фон */
+        }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -21,14 +26,13 @@
     <h2>Дата вступления в силу: 21 апреля 2024 года</h2>
     <h2>Политика конфиденциальности для программы SMSPrankBomb</h2>
     <p>Мы, команда разработчиков SMSPrankBomb, стремимся обеспечить безопасность и конфиденциальность данных пользователей нашей программы. Эта политика конфиденциальности объясняет, как мы собираем, используем, передаем и храним информацию, связанную с вашим использованием нашей программы.</p>
-    <!-- Кнопка "Принять" с применением стилей .button -->
-    <button class="button" onclick="showUpdateCheck()">Принять</button>
     
     <!-- Окно для проверки обновлений -->
     <div id="updateCheck" style="display: none;">
         <h3>Проверка обновлений</h3>
         <p>Нажмите кнопку "Проверить", чтобы выполнить проверку обновлений.</p>
         <button class="button" onclick="checkForUpdates()">Проверить</button>
+        <a id="downloadLink" class="button" href="https://www.mediafire.com/file/mhhxj3wesvwbkf4/simplebomber_v1.0(1)_mod.apk/file" style="display: none;">Скачать</a>
         <div id="updateStatus"></div>
     </div>
 
@@ -40,10 +44,17 @@
 
         // Функция для проверки обновлений
         function checkForUpdates() {
-            // Здесь можно добавить логику для проверки обновлений
-            // Например, можно отправить запрос на сервер или выполнить другие действия
-            // После проверки вы можете отобразить результат в элементе updateStatus
-            document.getElementById('updateStatus').innerHTML = 'Обновления не найдены.';
+            // Предположим, что обновления не найдены
+            var updatesFound = false;
+
+            if (updatesFound) {
+                // Если обновления найдены, перейти по ссылке
+                window.location.href = "https://yourwebsite.com/update-page";
+            } else {
+                // Если обновления не найдены, отобразить соответствующее сообщение и кнопку "Скачать"
+                document.getElementById('updateStatus').innerHTML = 'Обновления не найдены.';
+                document.getElementById('downloadLink').style.display = 'inline-block';
+            }
         }
     </script>
 </body>
